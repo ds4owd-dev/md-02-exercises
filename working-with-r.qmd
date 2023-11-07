@@ -1,7 +1,7 @@
 ---
 title: "Working with R"
 format: html
-editor: source
+editor: visual
 editor_options: 
   chunk_output_type: console
 ---
@@ -12,8 +12,8 @@ editor_options:
 
 ## Transform - Narrow down
 
-- Keyboard shortcut for pipe operator: Ctrl / Cmd + Shift + M 
-- Keyboard shortcut for assignment operator: Alt + -
+-   Keyboard shortcut for pipe operator: Ctrl / Cmd + Shift + M
+-   Keyboard shortcut for assignment operator: Alt + -
 
 ## Visualise
 
@@ -27,5 +27,5 @@ ggplot(data = ___,
 
 ## Communicate
 
-- Render the document to html format and fix any errors
-- In your homework assignment, we will check if your document renders without errors
+-   Render the document to html format and fix any errors
+-   In your homework assignment, we will check if your document renders without errors
