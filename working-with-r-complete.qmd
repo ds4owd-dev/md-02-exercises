@@ -8,9 +8,29 @@ editor_options:
 
 ## Import
 
+```{r}
+library(ggplot2)
+library(dplyr)
+library(gapminder)
+```
+
 ## Explore
 
+```{r}
+head(gapminder)
+tail(gapminder)
+glimpse(gapminder)
+str(gapminder)
+nrow(gapminder)
+ncol(gapminder)
+```
+
 ## Transform - Narrow down
+
+```{r}
+gapminder_2007 <- gapminder |> 
+  filter(year == 2007)
+```
 
 - Keyboard shortcut for pipe operator: Ctrl / Cmd + Shift + M 
 - Keyboard shortcut for assignment operator: Alt + -
@@ -18,9 +38,8 @@ editor_options:
 ## Visualise
 
 ```{r}
-#| eval: false
-ggplot(data = ___,
-       mapping = aes(x = ___,
+ggplot(data = gapminder_2007,
+       mapping = aes(x = continent,
                      y = lifeExp)) +
   geom_boxplot()
 ```
@@ -29,3 +48,6 @@ ggplot(data = ___,
 
 - Render the document to html format and fix any errors
 - In your homework assignment, we will check if your document renders without errors
+
+
+

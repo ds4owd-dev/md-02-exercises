@@ -1,0 +1,181 @@
+---
+title: "Data visualisation with ggplot2"
+format: html
+editor: source
+editor_options: 
+  chunk_output_type: console
+---
+
+## Import
+
+```{r}
+library(ggplot2)
+library(ggthemes)
+library(ggridges)
+library(palmerpenguins)
+```
+
+## Explore
+
+```{r}
+head(penguins)
+str(penguins)
+```
+
+## Visualise with ggplot2
+
+### Functions and arguments
+
+- functions: ggplot(), aes(), geom_point()
+- arguments: data, mapping, color
+
+```{r}
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm, 
+                     y = body_mass_g)) +
+  geom_point()
+```
+
+### Aesthetic mappings
+
+- options: x, y, color, shape, size, alpha
+
+```{r}
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm, 
+                     y = body_mass_g, 
+                     color = species,
+                     shape = species)) +
+  geom_point()
+```
+
+### Settings
+
+```{r}
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm, 
+                     y = body_mass_g, 
+                     color = species,
+                     shape = species)) +
+  geom_point(size = 5, alpha = 0.7)
+```
+
+### Color scales
+
+```{r}
+
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm, 
+                     y = body_mass_g, 
+                     color = species,
+                     shape = species)) +
+  geom_point(size = 5, alpha = 0.7) +
+  scale_color_colorblind() 
+
+```
+
+```{r}
+
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm, 
+                     y = body_mass_g, 
+                     color = species,
+                     shape = species)) +
+  geom_point(size = 5, alpha = 0.7) +
+  scale_color_manual(values = c("red", "blue", "green")) 
+
+```
+
+### Facets
+
+Keyboard shortcut for the tilde (~) varies by keyboard layout:
+
+- US keyboard Windows/Mac: Shift + ` (top left of your keyboard next to the 1)
+- UK keyboard Windows/Mac: Shift + # (bottom right of your keyboard, next to Enter)
+- CH keyboard Windows/Max: Alt/Option + - 
+
+
+```{r}
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm,
+                     y = body_mass_g)) +
+  geom_point() +
+  facet_grid(species ~ island)
+```
+
+```{r}
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm,
+                     y = body_mass_g)) +
+  geom_point() +
+  facet_wrap(~species)
+```
+
+### Themes
+
+```{r}
+
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm, 
+                     y = body_mass_g, 
+                     color = species,
+                     shape = species)) +
+  geom_point(size = 5, alpha = 0.7) +
+  scale_color_colorblind() +
+  theme_minimal()
+
+```
+
+## Visualising distributions
+
+### Categorical variables
+
+```{r}
+ggplot(data = penguins,
+       mapping = aes(x = species)) +
+  geom_bar()
+```
+
+```{r}
+ggplot(data = penguins,
+       mapping = aes(x = species,
+                     fill = island)) +
+  geom_bar()
+```
+
+### Numerical continuous variables
+
+```{r}
+ggplot(data = penguins,
+       mapping = aes(x = body_mass_g)) +
+  geom_histogram()
+```
+
+```{r}
+ggplot(data = penguins,
+       mapping = aes(x = body_mass_g,
+                     fill = species)) +
+  geom_histogram()
+```
+
+```{r}
+ggplot(data = penguins,
+       mapping = aes(x = body_mass_g,
+                     fill = species)) +
+  geom_density()
+```
+
+```{r}
+ggplot(data = penguins,
+       mapping = aes(x = body_mass_g,
+                     y = species,
+                     fill = species)) +
+  geom_density_ridges()
+```
+
+## Communicate
+
+- Render the document to html format and fix any errors
+- In your homework assignment, we will check if your document renders without errors
+
+
