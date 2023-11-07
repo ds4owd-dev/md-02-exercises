@@ -1,7 +1,7 @@
 ---
 title: "Data visualisation with ggplot2"
 format: html
-editor: source
+editor: visual
 editor_options: 
   chunk_output_type: console
 ---
@@ -26,8 +26,8 @@ str(penguins)
 
 ### Functions and arguments
 
-- functions: ggplot(), aes(), geom_point()
-- arguments: data, mapping, x, y
+-   functions: ggplot(), aes(), geom_point()
+-   arguments: data, mapping, x, y
 
 ```{r}
 
@@ -35,7 +35,7 @@ str(penguins)
 
 ### Aesthetic mappings
 
-- argument options in aes() function: x, y, color, shape, size, alpha
+-   argument options in aes() function: x, y, color, shape, size, alpha
 
 ```{r}
 
@@ -61,11 +61,11 @@ str(penguins)
 
 Some code in this section is already prepared, we will add more code together.
 
-Keyboard shortcut for the tilde (~) varies by keyboard layout:
+Keyboard shortcut for the tilde (\~) varies by keyboard layout:
 
-- US keyboard Windows/Mac: Shift + ` (top left of your keyboard next to the 1)
-- UK keyboard Windows/Mac: Shift + # (bottom right of your keyboard, next to Enter)
-- CH keyboard Windows/Max: Alt/Option + - 
+-   US keyboard Windows/Mac: Shift + \` (top left of your keyboard next to the 1)
+-   UK keyboard Windows/Mac: Shift + \# (bottom right of your keyboard, next to Enter)
+-   CH keyboard Windows/Max: Alt/Option + -
 
 ```{r}
 ggplot(data = penguins,
@@ -143,7 +143,5 @@ ggplot(data = penguins,
 
 ## Communicate
 
-- Render the document to html format and fix any errors
-- In your homework assignment, we will check if your document renders without errors
-
-
+-   Render the document to html format and fix any errors
+-   In your homework assignment, we will check if your document renders without errors
