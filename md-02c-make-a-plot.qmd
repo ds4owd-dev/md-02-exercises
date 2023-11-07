@@ -1,0 +1,65 @@
+---
+title: "Your turn: Make a plot"
+format:
+  html:
+    embed-resources: true
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Task 1: Import
+
+The required packages for this homework exercise have already been added.
+
+1.  Run the code chunk with the label 'load-packages' to load the required packages. Tipp: Click on the green play button in the top right corner of the code chunk.
+
+```{r}
+#| label: load-packages
+library(gapminder)
+library(ggplot2)
+library(dplyr)
+```
+
+## Task 2: Transform for data in 2007
+
+Below is a typical task description as you will find them in the homework assignments. For "Fill in the gaps" tasks, you should replace the underscores \_\_\_ with the described code and then change the value of the code block option from false to true. In other tasks, you will create your own code from scratch. Over time, the task descriptions will be become less detailed.
+
+**Fill in the gaps**
+
+1.  A code chunk has already been created below.
+
+2.  Start with the `gapminder` object and add the pipe operator at the end of the line.
+
+3.  On a new line use the `filter()` function to narrow down the data for observation of the year 2007.
+
+4.  Use the assignment operator to assign the data to an object named `gapminder_2007`.
+
+5.  Run the code contained in the code chunk and fix any errors.
+
+6.  Next to the code chunk option `#| eval:` change the value from `false` to `true`.
+
+7.  Render the document and fix any errors.
+
+```{r}
+#| eval: false
+ 
+gapminder_2007 <- ___ |> 
+  ___(year == 2007) 
+```
+
+## Task 3: Create a boxplot
+
+This is a typical task without any starter code.
+
+1.  Add a new code chunk below point 5.
+
+2.  Use the `ggplot()` function and the `gapminder_2007` object to create a boxplot with the following aesthetic mappings:
+
+-   continent to the x-axis;
+-   life expectancy to the y-axis;
+-   continent to color using the `fill = continent` argument inside `aes()`
+
+3.  Run the code contained in the code chunk and fix any errors.
+
+4.  What are the data types of the three variables used for aesthetic mappings?

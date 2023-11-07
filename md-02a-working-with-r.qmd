@@ -1,6 +1,8 @@
 ---
 title: "Working with R"
-format: html
+format:
+  html:
+    embed-resources: true
 editor: visual
 editor_options: 
   chunk_output_type: console
@@ -15,7 +17,7 @@ editor_options:
 -   Keyboard shortcut for pipe operator: Ctrl / Cmd + Shift + M
 -   Keyboard shortcut for assignment operator: Alt + -
 
-## Visualise
+## Visualize
 
 ```{r}
 #| eval: false

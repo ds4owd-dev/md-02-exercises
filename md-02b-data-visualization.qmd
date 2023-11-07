@@ -1,6 +1,8 @@
 ---
-title: "Data visualisation with ggplot2"
-format: html
+title: "Data visualization with ggplot2"
+format:
+  html:
+    embed-resources: true
 editor: visual
 editor_options: 
   chunk_output_type: console
@@ -111,7 +113,7 @@ ggplot(data = penguins,
 
 ### Numerical continuous variables
 
-The code in this section is already prepared, we will run through the code cells together.
+The code in this section is already prepared, we will run through the code chunks together.
 
 ```{r}
 ggplot(data = penguins,
