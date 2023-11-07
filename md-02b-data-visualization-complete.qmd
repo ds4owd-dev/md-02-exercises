@@ -22,7 +22,7 @@ head(penguins)
 str(penguins)
 ```
 
-## Visualise with ggplot2
+## Visualize with ggplot2
 
 ### Functions and arguments
 
@@ -125,7 +125,7 @@ ggplot(data = penguins,
 
 ```
 
-## Visualising distributions
+## Visualizing distributions
 
 ### Categorical variables
 
