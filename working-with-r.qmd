@@ -1,0 +1,19 @@
+---
+title: "Working with R"
+format: html
+editor: source
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(ggplot2)
+library(gapminder)
+```
+
+# Data
+
+```{r}
+head(gapminder)
+```
+
