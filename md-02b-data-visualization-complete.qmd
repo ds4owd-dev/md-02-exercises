@@ -28,8 +28,8 @@ str(penguins)
 
 ### Functions and arguments
 
--   functions: ggplot(), aes(), geom_point()
--   arguments: data, mapping, color
+-   functions: `ggplot()`, `aes()`, `geom_point()`
+-   arguments: `data`, `mapping`, `color`
 
 ```{r}
 ggplot(data = penguins,
@@ -40,7 +40,7 @@ ggplot(data = penguins,
 
 ### Aesthetic mappings
 
--   options: x, y, color, shape, size, alpha
+-   options: `x`, `y`, `color`, `shape`, `size`, `alpha`
 
 ```{r}
 ggplot(data = penguins,

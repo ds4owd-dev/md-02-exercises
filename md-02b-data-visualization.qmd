@@ -28,8 +28,8 @@ str(penguins)
 
 ### Functions and arguments
 
--   functions: ggplot(), aes(), geom_point()
--   arguments: data, mapping, x, y
+-   functions: `ggplot()`, `aes()`, `geom_point()`
+-   arguments: `data`, `mapping`, `x`, `y`
 
 ```{r}
 
@@ -37,7 +37,7 @@ str(penguins)
 
 ### Aesthetic mappings
 
--   argument options in aes() function: x, y, color, shape, size, alpha
+-   argument options in `aes()` function: `x`, `y`, `color`, `shape`, `size`, `alpha`
 
 ```{r}
 
