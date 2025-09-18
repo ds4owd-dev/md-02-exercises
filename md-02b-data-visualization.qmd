@@ -73,14 +73,16 @@ Keyboard shortcut for the tilde (\~) varies by keyboard layout:
 ggplot(data = penguins,
        mapping = aes(x = flipper_length_mm,
                      y = body_mass_g)) +
-  geom_point() 
+  geom_point() +
+  facet_grid(species ~ island)
 ```
 
 ```{r}
 ggplot(data = penguins,
        mapping = aes(x = flipper_length_mm,
                      y = body_mass_g)) +
-  geom_point() 
+  geom_point() +
+  facet_wrap(~species)
 ```
 
 ### Themes
