@@ -4,6 +4,8 @@ subtitle: "Data Science Lifecycle"
 format:
   html:
     embed-resources: true
+execute:
+  warning: false
 editor: visual
 editor_options: 
   chunk_output_type: console
