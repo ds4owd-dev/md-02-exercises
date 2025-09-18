@@ -26,9 +26,9 @@ library(dplyr)
 
 Get an overview of the data structure and the variables available.
 
-1. Run the code chunk below to explore the `gapminder` dataset. This will give you 
+1.  Run the code chunk below to explore the `gapminder` dataset. This will give you
 
-2. What are the variables in the dataset? 
+2.  What are the variables in the dataset?
 
 ```{r}
 head(gapminder)
