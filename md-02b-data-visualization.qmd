@@ -10,6 +10,8 @@ editor_options:
 
 ## Import
 
+We load the necessary packages for data visualization and the penguins dataset.
+
 ```{r}
 library(ggplot2)
 library(ggthemes)
@@ -19,6 +21,8 @@ library(palmerpenguins)
 
 ## Explore
 
+Let's examine the structure and first few rows of the penguins dataset.
+
 ```{r}
 head(penguins)
 str(penguins)
@@ -26,7 +30,11 @@ str(penguins)
 
 ## Visualize with ggplot2
 
+We'll build visualizations step by step using ggplot2's grammar of graphics.
+
 ### Functions and arguments
+
+The basic building blocks of ggplot2 are functions and their arguments.
 
 -   functions: `ggplot()`, `aes()`, `geom_point()`
 -   arguments: `data`, `mapping`, `x`, `y`
@@ -37,6 +45,8 @@ str(penguins)
 
 ### Aesthetic mappings
 
+Map data variables to visual properties like position, color, and shape.
+
 -   argument options in `aes()` function: `x`, `y`, `color`, `shape`, `size`, `alpha`
 
 ```{r}
@@ -45,11 +55,15 @@ str(penguins)
 
 ### Settings
 
+Customize appearance with fixed values rather than data mappings.
+
 ```{r}
 
 ```
 
 ### Color scales
+
+Modify default color palettes to improve accessibility and aesthetics.
 
 ```{r}
 
@@ -61,7 +75,7 @@ str(penguins)
 
 ### Facets
 
-Some code in this section is already prepared, we will add more code together.
+Create small multiples by splitting data into panels. Some code in this section is already prepared, we will add more code together.
 
 Keyboard shortcut for the tilde (\~) varies by keyboard layout:
 
@@ -87,7 +101,7 @@ ggplot(data = penguins,
 
 ### Themes
 
-Some code in this section is already prepared, we will add more code together.
+Apply pre-built themes to change the overall look of your plots. Some code in this section is already prepared, we will add more code together.
 
 ```{r}
 
@@ -103,7 +117,11 @@ ggplot(data = penguins,
 
 ## Visualizing distributions
 
+Explore how data is distributed across different categories and values.
+
 ### Categorical variables
+
+Use bar charts to show counts or proportions of categorical data.
 
 ```{r}
 
@@ -115,7 +133,7 @@ ggplot(data = penguins,
 
 ### Numerical continuous variables
 
-The code in this section is already prepared, we will run through the code chunks together.
+Visualize the distribution of continuous data with histograms and density plots. The code in this section is already prepared, we will run through the code chunks together.
 
 ```{r}
 ggplot(data = penguins,
@@ -147,5 +165,6 @@ ggplot(data = penguins,
 
 ## Communicate
 
+Share your analysis by rendering this document to a standalone HTML file.
+
 -   Render the document to html format and fix any errors
--   In your homework assignment, we will check if your document renders without errors
