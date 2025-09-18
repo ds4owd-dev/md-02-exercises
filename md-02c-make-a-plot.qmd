@@ -56,7 +56,7 @@ Below is a typical task description as you will find them in the homework assign
 ```
 
 ## Task 4: Create a boxplot
-s
+
 Write code to create a boxplot showing life expectancy by continent.
 
 1.  Start with: `ggplot(data = gapminder_2007)` to use the `gapminder_2007` object as the data for plot.
@@ -67,12 +67,15 @@ Write code to create a boxplot showing life expectancy by continent.
 
 -   continent to the x-axis;
 -   life expectancy to the y-axis; (tipp: check the variable names with the code in Task 2)
+-   continent as a colour scale, using the `fill = continent` argument inside `aes();`
 
 4.  Add a `+` at the end of the line, then on a new line add: `geom_boxplot()`
 
 5.  Run the code and verify you see 5 boxes.
 
-6.  Render the document and fix any errors.
+6.  Discuss in your room why it is unnecessary to add colours for continent.
+
+7.  Render the document and fix any errors.
 
 ```{r}
 

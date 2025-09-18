@@ -10,22 +10,32 @@ editor_options:
 
 ## Task 1: Import
 
-The required packages for this homework exercise have already been added.
+The required packages for this homework exercise have already been added to the following code-chunk.
 
-1.  Run the code chunk with the label 'load-packages' to load the required packages. Tipp: Click on the green play button in the top right corner of the code chunk.
+1.  Run the following code chunk. Tipp: Click on the green play button in the top right corner of the code chunk.
 
 ```{r}
-#| label: load-packages
 library(gapminder)
 library(ggplot2)
 library(dplyr)
 ```
 
-## Task 2: Transform for data in 2007
+## Task 2: Explore
 
-Below is a typical task description as you will find them in the homework assignments. For "Fill in the gaps" tasks, you should replace the underscores \_\_\_ with the described code and then change the value of the code block option from false to true. In other tasks, you will create your own code from scratch. Over time, the task descriptions will be become less detailed.
+Get an overview of the data structure and the variables available.
 
-**Fill in the gaps**
+1.  Run the code chunk below to explore the `gapminder` dataset. This will give you
+
+2.  What are the variables in the dataset?
+
+```{r}
+head(gapminder)
+str(gapminder)
+```
+
+## Task 3: Transform for data in 2007
+
+Below is a typical task description as you will find them in the homework assignments. In some tasks, I have already prepared the code and will ask you to describe it in words. In other tasks, you will create your own code from scratch. Over time, the task descriptions will be become less detailed.
 
 1.  A code chunk has already been created below.
 
@@ -33,36 +43,41 @@ Below is a typical task description as you will find them in the homework assign
 
 3.  On a new line use the `filter()` function to narrow down the data for observation of the year 2007.
 
-4.  Use the assignment operator to assign the data to an object named `gapminder_2007`.
+4.  Run the code contained in the code chunk and fix any errors. Observe the result in the Console.
 
-5.  Run the code contained in the code chunk and fix any errors.
+5.  Use the assignment operator to assign the data to an object named `gapminder_2007`.
 
-6.  Next to the code chunk option `#| eval:` change the value from `false` to `true`.
+6.  Run the code contained in the code chunk and fix any errors.
 
 7.  Render the document and fix any errors.
 
 ```{r}
-#| eval: true
  
 gapminder_2007 <- gapminder |> 
   filter(year == 2007) 
 ```
 
-## Task 3: Create a boxplot
+## Task 4: Create a boxplot
 
-This is a typical task without any starter code.
+s Write code to create a boxplot showing life expectancy by continent.
 
-1.  Add a new code chunk below point 5.
+1.  Start with: `ggplot(data = gapminder_2007)` to use the `gapminder_2007` object as the data for plot.
 
-2.  Use the `ggplot()` function and the `gapminder_2007` object to create a boxplot with the following aesthetic mappings:
+2.  Then, add a comma after `gapminder_2007` and add `mapping = aes()` function.
+
+3.  Inside `aes()`, add the following aesthetic mappings:
 
 -   continent to the x-axis;
--   life expectancy to the y-axis;
--   continent to color using the `fill = continent` argument inside `aes()`
+-   life expectancy to the y-axis; (tipp: check the variable names with the code in Task 2)
+-   continent as a colour scale, using the `fill = continent` argument inside `aes();`
 
-3.  Run the code contained in the code chunk and fix any errors.
+4.  Add a `+` at the end of the line, then on a new line add: `geom_boxplot()`
 
-4.  What are the data types of the three variables used for aesthetic mappings?
+5.  Run the code and verify you see 5 boxes.
+
+6.  DIscuss in your room why it is unnecessary to add colours for continent.
+
+7.  Render the document and fix any errors.
 
 ```{r}
 ggplot(data = gapminder_2007,
