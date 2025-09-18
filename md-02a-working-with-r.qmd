@@ -1,5 +1,6 @@
 ---
 title: "Working with R"
+subtitle: "Data Science Lifecycle"
 format:
   html:
     embed-resources: true
@@ -10,24 +11,55 @@ editor_options:
 
 ## Import
 
+We import data using packages that provide access to datasets and analysis tools. This is one way of importing data.
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(gapminder)
+```
+
 ## Explore
+
+The first step when working with new unknown data is to explore it and learn about the variables.
+
+```{r}
+
+```
 
 ## Transform - Narrow down
 
--   Keyboard shortcut for pipe operator: Ctrl / Cmd + Shift + M
--   Keyboard shortcut for assignment operator: Alt + -
+We change the format of the data to prepare it for analysis.
+
+-   Keyboard shortcut for pipe operator `|>`: Ctrl / Cmd + Shift + M
+-   Keyboard shortcut for assignment operator `<-`: Alt + -
+
+```{r}
+gapminder_2007 <- gapminder |> 
+  filter(year == 2007)
+```
+
+```{r}
+
+```
 
 ## Visualize
 
+We explore further using visualization or prepare our analysis using visualization.
+
 ```{r}
-#| eval: false
-ggplot(data = ___,
-       mapping = aes(x = ___,
+ggplot(data = gapminder_2007,
+       mapping = aes(x = continent,
                      y = lifeExp)) +
   geom_boxplot()
 ```
 
+```{r}
+
+```
+
 ## Communicate
 
+Finally, we communicate by rendering the file and then sharing it with others.
+
 -   Render the document to html format and fix any errors
--   In your homework assignment, we will check if your document renders without errors
